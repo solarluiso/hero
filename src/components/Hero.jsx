@@ -1,10 +1,11 @@
-// Updated Hero component
 import React from "react";
 import { motion } from "framer-motion";
 
+import ImageCarousel from "./ImageCarousel";
+
 const Hero = () => {
   return (
-    <section className="gradient-background p-10 text-white min-h-screen flex items-center justify-center">
+    <section className="gradient-background p-10 text-white min-h-screen flex flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -19,6 +20,9 @@ const Hero = () => {
           Get Started
         </button>
       </motion.div>
+      <div className="container mt-4 mx-auto">
+        <ImageCarousel />
+      </div>
     </section>
   );
 };
